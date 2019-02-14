@@ -1,0 +1,46 @@
+body {
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-size: 14pt;
+  background: url(https://i.imgur.com/bqUVaU9.gif) 50%;
+  background-size: cover;
+}
+
+#wrapper {
+width: 80%;
+padding: 1%;
+margin: 1em auto;
+border: solid 1px silver;
+}
+.question p:first-child {
+font-weight: bold;
+}
+
+.ans {
+margin-left: 10px;
+}
+
+.right {
+display: block;
+border: solid 1px green;
+background: url("greencheck.png") no-repeat 10px;
+padding: 10px;
+padding-left: 60px;
+}
+
+.wrong {
+display: block;
+border: solid 1px red;
+background: url("redx.png") no-repeat 10px;
+padding: 10px;
+padding-left: 60px;
+}
+
+.ans span {
+display: none;
+margin-left: 20px;
+padding-top: 0.5em;
+}
+
+.show {
+display: block;
+}

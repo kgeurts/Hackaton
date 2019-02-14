@@ -4,11 +4,24 @@
 <head>
   <title>Quiz</title>
 <style>
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+
 body {
-font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-family: Roboto Slab;
 font-size: 14pt;
   background: url(https://i.imgur.com/bqUVaU9.gif) 50%;
   background-size: cover;
+  color: white;
+}
+.quiztitle {
+  font-size: 30px;
+  padding-left: 160px;
+
+}
+.quiztitle2 {
+  font-size: 20px;
+  
 }
 
 #wrapper {
@@ -28,7 +41,7 @@ margin-left: 10px;
 .right {
 display: block;
 border: solid 1px green;
-background: url("greencheck.png") no-repeat 10px;
+background: url("images/greencheck.png") no-repeat 10px;
 padding: 10px;
 padding-left: 60px;
 }
@@ -36,7 +49,7 @@ padding-left: 60px;
 .wrong {
 display: block;
 border: solid 1px red;
-background: url("redx.png") no-repeat 10px;
+background: url("images/redx.png") no-repeat 10px;
 padding: 10px;
 padding-left: 60px;
 }
@@ -76,8 +89,10 @@ $(this).children(":first").css("display", "block").css("color", spancolor);
 </head>
 
 <body>
+<div class="quiztitle">
 <h1>Interactive Quiz</h1>
-<p>Text over iets wat we willen vertellen hier?! <a href="../QuizObnoxious">here</a>.</p>
+<p class="quiztitle2">Voor onze hackaton levels klik <a href="https://imgur.com/a/OBxAO6x">hier</a>.</p>
+</div>
 <div id="wrapper">
 <div class="question" id="q1">
 <p>1. Hoe groot is de plastic soep?</p>
