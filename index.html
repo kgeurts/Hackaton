@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="NL">
+
+<head>
+  <title>Quiz</title>
+<style>
+body {
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-size: 14pt;
+  background: url(https://i.imgur.com/bqUVaU9.gif) 50%;
+  background-size: cover;
+}
+
+#wrapper {
+width: 80%;
+padding: 1%;
+margin: 1em auto;
+border: solid 1px silver;
+}
+.question p:first-child {
+font-weight: bold;
+}
+
+.ans {
+margin-left: 10px;
+}
+
+.right {
+display: block;
+border: solid 1px green;
+background: url("greencheck.png") no-repeat 10px;
+padding: 10px;
+padding-left: 60px;
+}
+
+.wrong {
+display: block;
+border: solid 1px red;
+background: url("redx.png") no-repeat 10px;
+padding: 10px;
+padding-left: 60px;
+}
+
+.ans span {
+display: none;
+margin-left: 20px;
+padding-top: 0.5em;
+}
+
+.show {
+display: block;
+}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function () {
+$("p.ans").click(function () {
+//Get the id of the div
+var qnum = "#" + $(this).parent().attr("id");
+//Clear previous freeback:
+$(qnum + " p.ans").removeClass("right wrong");
+$(qnum + " p span").css("display", "none");
+//Apply right or wrong class to p and span.
+var applyclass = "wrong"
+var spancolor = "red"
+if ($(this).hasClass("correct")) {
+applyclass = "right";
+spancolor = "green"
+}
+$(this).addClass(applyclass);
+$(this).children(":first").css("display", "block").css("color", spancolor);
+})
+});
+</script>
+</head>
+
+<body>
+<h1>Interactive Quiz</h1>
+<p>Text over iets wat we willen vertellen hier?! <a href="../QuizObnoxious">here</a>.</p>
+<div id="wrapper">
+<div class="question" id="q1">
+<p>1. Hoe groot is de plastic soep?</p>
+<p class="ans correct">a) Even groot als de planeet pluto<span>Goed!, )</span></p>
+<p class="ans">b) Even groot als nederland<span>Helaas fout!</span></p>
+<p class="ans">c) Even groot als het continent afrika<span>Helaas fout!</span></p>
+</div>
+<div class="question" id="q2">
+<p>2. Hoeveel liter water word er gebruikt om 1 kilo vlees te maken?</p>
+<p class="ans ">a) 5000 liter water<span>Helaas fout!</span></p>
+<p class="ans">b) 10.000 liter water<span>Helaas fout!</span></p>
+<p class="ans correct">c) 15.000 liter water<span>Goed!,</span></p>
+</div>
+    <div class="question" id="q3">
+<p>3. Wat zorgt voor de opwarming van de aarde?</p>
+<p class="ans correct">a) Broeikaseffect<span>Goed!,</span></p>
+<p class="ans">b) De zon wordt warmer<span>Helaas fout!</span></p>
+<p class="ans ">c) De aarde komt dichterbij de zon<span>Helaas fout!</span></p>
+</div>
+  <div class="question" id="q4">
+  <p>4. Welk voedsel is het slechtst voor het klimaat?</p>
+<p class="ans correct">a) Rundvlees<span>Goed!,</span></p>
+<p class="ans">b) Kip<span>Helaas fout!</span></p>
+<p class="ans ">c) Varkensvlees<span>Helaas fout!</span></p>
+</div>
+    <div class="question" id="q5">
+  <p>5. Welk vervoermiddel is het beste voor het klimaat?</p>
+<p class="ans ">a) De metro<span>Helaas fout!</span></p>
+<p class="ans">b) De auto<span>Helaas fout!</span></p>
+<p class="ans correct">c) De fiets<span>Goed!,.</span></p>
+</div>
+  <div class="question" id="q6">
+  <p>6. Waarmee kun je de meeste CO2-uitstoot besparen?</p>
+<p class="ans correct">a) Je huis zuiniger verwarmen<span>Goed!,</span></p>
+<p class="ans">b) Altijd voor maximaal 5minuten douchen<span>Helaas fout!</span></p>
+<p class="ans ">c) Geen wasmachine en droger gebruiken<span>Helaas fout!</span></p>
+</div>
+    <div class="question" id="q7">
+  <p>7. Wat is de schoonste auto brandstof voor het milieu?</p>
+<p class="ans correct">a) Elektriciteit <span>Goed!,</span></p>
+<p class="ans">b) Benzine<span>Helaas fout!</span></p>
+<p class="ans ">c) LPG<span>Helaas fout!</span></p>
+</div>
+  <div class="question" id="q8">
+  <p>8. Wie is de oprichter van 'The Ocean Cleanup'?</p>
+<p class="ans ">a) Alex Schulze<span>Helaas fout!</span></p>
+<p class="ans">b) David Katz<span>Helaas fout!</span></p>
+<p class="ans correct">c) Boyan Slat<span>Goed!,.</span></p>
+</div>
+  <div class="question" id="q9">
+    <p>9. In welk continent / regio is er het meeste waterschaarste?</p>
+<p class="ans correct">a) In het midden-oosten<span>Goed!,</span></p>
+<p class="ans">b) In Azie<span>Helaas fout!</span></p>
+<p class="ans ">c) Oceanie<span>Helaas fout!</span></p>
+</div>
+</div>
+</div>
+
+
+</body>
+
+</html>
